@@ -1,0 +1,32 @@
+import java.util.Hashset;
+class SubSequecences 
+{
+	public static void  SubSequecences(String str,int idx,String newstr,Hashset<String> set){
+		
+		if (idx ==str.length())
+		{
+		      if (set.contain(newstr))
+		      {
+				  return;
+		      }
+			  else{
+					System.out.println(newstr);
+					set.add(newstr);
+						return;
+			  }
+		
+		}
+		char currchar=str.charAt(idx);
+		//to be
+          SubSequecences(str,idx+1,newstr+currchar,set);   
+		// not tobe add in newstr
+		          SubSequecences(str,idx+1,newstr,set);   
+	}
+	public static void main(String[] args) 
+	{
+		String str="aaaa";
+		Hashset<String> set=new Hash<>();
+		SubSequecences(str,0,"");
+
+	}
+}

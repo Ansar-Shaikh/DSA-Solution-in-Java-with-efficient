@@ -1,0 +1,66 @@
+class complex {
+    int real;
+    int imag;
+
+    // Default constructor
+    complex() {
+        this.real = 0;
+        this.imag = 0;
+    }
+
+    // Parameterized constructor
+    complex(int r, int i) {
+        this.real = r;
+        this.imag = i;
+    }
+
+    // Method to add two complex numbers
+    public static Complex add(Complex a, Complex b) {
+        return new Complex(a.real + b.real, a.imag + b.imag);
+    }
+
+    // Method to subtract two complex numbers
+    public static Complex sub(Complex a, Complex b) {
+        return new Complex(a.real - b.real, a.imag - b.imag);
+    }
+
+    // Method to multiply two complex numbers
+    public static Complex multiply(Complex a, Complex b) {
+        int realPart = a.real * b.real - a.imag * b.imag;
+        int imagPart = a.real * b.imag + a.imag * b.real;
+        return new Complex(realPart, imagPart);
+    }
+
+    // Method to print a complex number
+    public void printComplex() {
+        if (real == 0 && imag != 0) {
+            System.out.println(imag + "i");
+        } else if (real != 0 && imag == 0) {
+            System.out.println(real);
+        } else if (real == 0 && imag == 0) {
+            System.out.println("0");
+        } else {
+            System.out.println(real + "+" + imag + "i");
+        }
+    }
+
+    public static void main(String[] args) {
+        complex a = new complex(7, 8);
+        complex b = new complex(5, 6);
+        
+        // Addition
+        complex resultAdd = complex.add(a, b);
+        System.out.print("Addition: ");
+        resultAdd.printComplex();
+        
+        // Subtraction
+        complex resultSub = complex.sub(a, b);
+        System.out.print("Subtraction: ");
+        resultSub.printComplex();
+        
+        // Multiplication
+        complex resultMul = complex.multiply(a, b);
+        System.out.print("Multiplication: ");
+        resultMul.printComplex();
+    }
+}

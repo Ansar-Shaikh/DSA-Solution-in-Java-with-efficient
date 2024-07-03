@@ -1,0 +1,23 @@
+class FindLargestWordInString 
+{
+
+	public static String FindLargestWordInString(String str){
+         String word[]=str.split(" ");
+		 String  largestword="";
+		 for (int i=0;i<word.length ;i++ )
+		 {
+			 if (word[i].length()>largestword.length())
+			 {
+				 largestword=word[i];
+				 }
+		 }
+		 return largestword;
+	}
+	public static void main(String[] args) 
+	{
+		String str="hello loveuuuu u my";
+        String ans=FindLargestWordInString(str);
+               System.out.println(ans);
+		System.out.println("Hello  World!");
+	}
+}

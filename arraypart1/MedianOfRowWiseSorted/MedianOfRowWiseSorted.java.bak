@@ -1,0 +1,31 @@
+import java.util.Arrays;
+class MedianOfRowWiseSorted 
+{
+	public static int median(int arr[][] ,int row,int col){
+		int temp []=new int [row*col];
+		int idx=0;
+		for (int i=0;i<row ;i++ )
+		{
+			for (int j=0;j<col ;j++ )
+			{
+                     temp[idx++]=arr[i][j];
+					 System.out.println(temp[idx]+" ");
+			}
+			
+		}
+		Arrays.sort(temp);
+ int mid=row*col/2;
+    int mids=temp[mid];
+		return mids;
+		
+	}
+	public static void main(String[] args) 
+	{
+		int arr[][]={{1,5,7,8,9},
+			                  {2,3,5,7,8},
+			{2,5,7,8,9}};
+		int row=3;
+		int col=5;
+		System.out.println("Meadin of an array!"+median(arr ,row,col));
+	}
+}
