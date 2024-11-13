@@ -1,0 +1,57 @@
+import java.util.*;
+class DiagonalOfTree 
+{
+
+	static class Node 
+	{
+		int data;
+		Node left;
+		Node right;
+         Node(int data){
+			this.data=data;
+			this.left= null;
+			this.right=null;
+         }
+	}
+	public static ArrayList<Integer> diagonal(Node root){
+		ArrayList<Integer> ans= new ArrayList<>();
+		Queue<Node> q=new LinkedList<>();
+		q.add(root);// intialy element;
+		while (q.isEmpty()==false)
+		{
+			Node curr=q.remove();// first element remove the element 
+			while (curr != null)
+			{
+				// to only insert the curr ka  just left in quueue
+				// and ans mai curr node insert kro
+				if (root.left != null)
+				{
+					q.add(curr.left);// just left 
+					ans.add(curr.data);
+					curr=curr.right;
+				}
+			}
+		}
+		return ans;
+	}
+	public static void main(String[] args) 
+	{
+		Node root =new Node(1);
+		 root.left=new Node (2);
+		 root.right=new Node(3);
+		 root.left.left=new Node(8);
+		 root.left.right=new Node (9);
+		 root.left.right.left=new Node(9);
+		 root.left.right.left.left=new Node(10);
+		 root.right.left=new Node(4);
+		 root.right.left.left=new Node(7);
+		 root.right.right.right=new Node(5);
+		 root.right.right.right.right=new Node(6);
+            ArrayList<Integer> ans= diagonal(root);
+			for (int i=0;i<ans.size();i++ )
+			{
+             		System.out.println("Hello World!"+ans.get(i));
+			}
+
+	}
+}

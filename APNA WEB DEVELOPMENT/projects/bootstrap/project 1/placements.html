@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeal College Logo Popup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #004080;
+            color: white;
+            height: 100%;
+        }
+
+        /* Style for the logo image */
+        .logo {
+            max-width: 100%;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: -180px;
+        }
+
+        .logo:hover {
+            opacity: 0.7;
+        }
+
+        #mylogo {
+            margin-top: -200%;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of the image */
+        .caption {
+            margin: auto;
+            display: block;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content,
+        .caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #place {
+            color: black;
+        }
+
+        #placement {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            margin-left: 500px;
+            background-color: #004080;
+
+        }
+
+        #imgplace {
+            left: 200px;
+        }
+
+        div ol li {
+            color: antiquewhite;
+            font-size: 20px;
+        }
+
+        #outer {
+            background-color: cadetblue;
+        }
+
+        #cell {
+            background-color: #004080;
+            height: 100px;
+            padding-top: 80px;
+            color: white;
+        }
+
+        ol {
+            color: #004181;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        ol li {
+            font-size: 18px;
+            color: black;
+        }
+
+        #number {
+            background-color: rgb(21, 46, 38);
+        }
+        #one{
+            width:400px ;
+            height: 350px;
+            padding-left: 50px;
+            border: 5px solid purple;
+            box-shadow: -3px -3px 3px yellow;
+            display: inline-block;
+            margin-left: 23px;
+            
+        }
+        #two{
+            width:400px ;
+            height: 350px;
+            padding-left: 50px;
+            border: 5px solid purple;
+            /* box-shadow: 3px 3px 3px yellow; */
+            display: inline-block;
+            margin-left: 23px;
+        }
+        #three{
+            width:400px ;
+            height: 350px;
+            padding-left: 50px;
+            border: 5px solid purple;
+            box-shadow: 3px 3px 3px yellow;
+            display: inline-block;
+            margin-left: 23px;
+        }
+        p:nth-child(2n){
+            font-weight: bold;
+            font-size: 1.4em;
+            color: rgb(11, 3, 7);
+        }
+        #outer{
+            background-color: #476889;
+            height: 350px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to Zeal College <b id="place"> Placement</b>, Nerhe Pune</h1>
+        <h1>Opportunities don't happen, you create them.</h1>
+        <h1>Success is where preparation and opportunity meet</h1>
+    </header>
+
+    <!-- Zeal Logo -->
+    <img id="myLogo" src="placement.jpeg" alt="Zeal College Logo" class="logo">
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div class="caption" id="caption"></div>
+    </div>
+    <div id="outer">
+        <div id="placement">
+            <img id="imgplace" src="Wadekar.jpg" alt="">
+            <b style="color: darkorange;">Prof. Sachin Wadekar
+                Department Placement Cell Head</b>
+            <div>
+                <ol>
+                    <li>Provived 100% Placement from 2015</li>
+                    <li>More than 300 students worked in various sectors </li>
+                    <li>Provived highest Package of 8.40packages</li>
+                    <li>Average Package of 3.8 lakhs </li>
+                </ol>
+
+
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h3 id="cell">Central Placement Cell (Engineering),<b> Quotes for Placement:</b>
+        Do not wait to strike till the iron is hot, but make it hot by striking
+    </h3>
+    <div id="number">
+        <ol>
+            Number of Placement Offers:
+            <li>2021-22: 650 offers</li>
+            <li>2022-23: 720 offers</li>
+            <li> 2023-24: 597 offers (ongoing)</li>
+        </ol>
+        <ol>Number of Drives:
+            <li> 2021-22: 284</li>
+            <li>2022-23: 318</li>
+            <li>2023-24: 276 (till date)</li>
+        </ol>
+        <ol>
+            Last Three Year ZCOER Placement Statistics:
+            <li>2100+ students registered</li>
+            <li>1980+ offers</li>
+            <li>750+ companies visited</li>
+            <li> Highest Package (International): 16.2 LPA</li>
+            <li> Highest Package (National): 15.11 LPA</li>
+            <li> Highest Package (National): 15.11 LPA</li>
+            <li>MoU With: 50+ industries</li>
+        </ol>
+        <ol>
+            Core Companies:
+            <li>Mittal Nippon Steel, Wipro Pari, Fuji Electric, Yazaki, Bharat Forge, JCB, Britannia Industries,
+                HyosungT&D, Valeo, Mahindra Arcelor Logistics, Linde India Ltd, Schindler, Tata Autocomp Systems,
+                Plastic Omnium,Cybernetik Technologies, Indovance, Triplan India, Motherson Sumi Wiring India Limited,
+                Robo SapiensAutomation, Precimac Solutions, Patil Automation, GSource Technologies, Knest Aluform,
+                Terracle Engineering,</li>
+            <br>
+            <li>Industries, Grupo Antolin Design and Business Services, Twin Industries, Shree Cement, Tube Investments
+                of India, Twenty Twenty Interior Design Software (India) MG Seating Systems, Gallop Infra Consultancy,
+                Vishnu Vaibhav Industries Pvt LTD, Pusalkar Suraksha Components, Bhavani Industries, API Metrology, UST,
+                Precision Group,Mahindra CIE, QH Talbros, Kranti Group, Intelux Electronics, Microverse Automation pvt
+                Ltd, Machine Maker ,Continental Surface solutions, BDB, Warade Packtech Pvt LtdZF Steering, Square
+                yards, Realtech Relation Pvt Ltd, Propbuying, Takshi Auto Components, Diehl, Raam Group, Panse
+                Automative.</li>
+        </ol>
+        <ol>Prominent IT Recruiters:
+            <li>
+                Tata Consultancy Services, Cognizant, Accenture, Hexaware, KPIT, Capgemini Technology Services India,
+                Tech Mahindra,HCL Tech, IBM India, Deloitte, Persistent Systems, Intelizign Lifecycle Services, Neeyamo
+                Enterprise Solutions, Accelirate Softech, QualityKiosk Technologies, Dexpert Systems,Equations Work IT
+                Services, Inteliment, Hexaview Technologies, Birlasoft, Harbinger Group, Tudip Technologies,Sankey
+                Solutions, Zensoft, cyberSecurist Technologies, ScopeSys Innovations, E- EMPHASYS,eBaoTech India,
+                Pratiti Technologies, NTT Data, RealThingks India,Worldline Global Services, Western Union Services
+                India
+            </li>
+        </ol>
+    </div>
+    <h1> Placement Scenario</h1>
+    <div id="outer">
+
+        <div id="one">
+            <p>2023-24</p>
+            <p>542+ (Still Continuing)<p>
+            <p>13.5 LPA</p>
+            <p>Infeanet Digital Solution & Web Media</p>
+            <p>offered by</p>
+            <p>4.5 LPA</p>
+            <p>Average Salary Packages</p>
+        </div>
+        <div id="two">
+            <p>2022-23</p>
+            <p>560+ (Still Continuing)<p>
+            <p>12.5 LPA</p>
+            <p>Futurense Technologies</p>
+            <p>offered by</p>
+            <p>4.5 LPA</p>
+            <p>Average Salary Packages</p>
+        </div>
+        <div id="three">
+            <p>2021-22</p>
+            <p>650+ (Still Continuing)</p>
+            <p>18.0 LPA</p>
+            <p>rt Camps</p>
+            <p>offered by</p>
+            <p>4.5 LPA</p>
+            <p>Average Salary Packages</p>
+        </div>
+        
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal
+        var img = document.getElementById("myLogo");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

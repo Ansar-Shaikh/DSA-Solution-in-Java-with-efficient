@@ -1,0 +1,100 @@
+.pet{
+    width: 80%;
+    height: 700px;
+    background-color: bisque;
+    border: 5px solid purple;
+    /* display: inline-block; */  
+    display: flex;
+
+
+}
+.card{
+  
+  
+    width: 300px;
+    height: 500px;
+    display: inline-block;
+    border: 5px solid black;
+    box-shadow:5px 5px 5px yellow ;
+    padding-left: 10px;
+    margin-left: 100px;
+    margin-top: 90px;
+    animation: heightanimation 2s ease-in 1s infinite alternate;
+    border-top-right-radius:60px ;
+    border-bottom-left-radius: 60px;
+}
+
+@keyframes heightanimation{
+    0%{
+        height:480px ;
+    }
+    100%{
+        height: 600px;
+    }
+}
+#cat{
+    border-radius: 50%;
+    margin-left: 50px;
+}
+#dog{
+    border-radius: 50%;
+    margin-left: 40px;
+    width: 150px;
+    height: 150px;
+}
+.card h3{
+    font-size: 20px;
+
+    color: darkblue;
+    text-align: center;
+}
+ h3{
+    font-size: 50px;
+
+    color: darkblue;
+    text-align: center;
+    animation: animallove 2s ease-in 1s infinite alternate;
+}
+p{
+    font-size: 30px;
+    color: red;
+    animation: catlove 2s ease-in 1s infinite alternate;
+}
+@keyframes catlove{
+    0%{
+        font-size: 40px;
+        color: green;
+        box-shadow: 5px 5px 5px black;
+       
+    }
+    100%{
+        
+            font-size: 80px;
+            color: rgb(226, 109, 20);
+            box-shadow: 5px 5px 5px rgb(60, 184, 32);
+            
+        
+    
+    }
+}
+@keyframes animallove{
+    0%{
+        font-size: 40px;
+        color: rgb(124, 128, 0);
+        box-shadow: 5px 5px 5px rgb(92, 4, 73);
+    }
+    100%{
+        
+            font-size: 80px;
+            color: rgb(34, 18, 6);
+            box-shadow: 5px 5px 5px rgb(188, 30, 41);
+            
+        
+    
+    }
+}
+h4{
+    text-align: center;
+    font-size: 30px;
+    color: black;
+}

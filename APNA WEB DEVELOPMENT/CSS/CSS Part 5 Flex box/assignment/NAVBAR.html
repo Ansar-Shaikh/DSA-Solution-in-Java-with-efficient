@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .continer {
+            height: 50px;
+            width: 900px;
+            display: flex;
+            background-color: pink;
+            border: 5px solid black;
+            border-radius: 10px;
+        }
+        .continer:hover.star{
+            box-shadow: 5px 5px 5px greenyellow;
+            margin: 10px 0 0 auto;
+        }
+
+
+        .continer div {
+            align-content: space-evenly;
+            justify-content: space-around;
+            padding-left: 50px;
+            font-size: 20px;
+        }
+        div input{
+            width: 200px;
+            height: 20px;
+            border-radius: 10px;
+
+        }
+        div input:hover{
+            box-shadow: 5px 5px 5px yellow;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="continer">
+        <div>logo</div>
+        <div>Home</div>
+        <div>Contact</div>
+        <div>About</div>
+        <div>Search:
+            <input type="text" placeholder="Search ">
+        </div>
+    </div>
+</body>
+
+</html>

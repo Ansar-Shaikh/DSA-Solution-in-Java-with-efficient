@@ -1,0 +1,99 @@
+import java.util.LinkedList;
+class Node
+{
+	int data;
+	Node next;
+	public Node(int data){
+		this.data=data;
+		this.next=null;
+	}
+}
+
+class MergedLinkedList 
+{
+	public Node head;
+	public Node tail;
+	private  static Node GetMid(Node head){
+		Node slow=head;
+		Node fast=head.next;// only difference is that in finding is cycle form or nnot
+		while (fast !=null && fast.next!=null)
+		{
+			slow=slow.next;// step by  only one 
+			fast=fast.next.next;// step by two 
+		}
+		return slow; // mid can be slow 
+	}
+	private  static Node merge(Node head1,Node head2){
+		Node mergedll=new Node(-1);
+		Node temp=mergedll;
+		while (head1 !=null && head2 !=null)
+		{
+			// comparison between righthalf and lefthalf is small then temp ll is points to lefthalf head
+
+			if ( head1.data<=head2.data)
+			{
+                  temp.next=head1;
+				  head1=head1.next;
+				  temp=temp.next;
+
+			}
+			else {
+	                         temp.next=head2;			
+							  head2=head2.next;
+						     temp=temp.next; 
+			}
+		}
+		// remaining node from left k=half and right half
+		while (head1 != null)
+		{
+        temp.next=head1;
+		head1=head1.next;
+		temp=temp.next;
+		}
+		while (head2 != null)
+		{
+			temp=temp.next;
+			head2=head2.next;
+			temp=temp.next;
+		}
+		return mergedll.next;// beccause we intialition of -1 starting ko
+	}
+	public static Node mergedsort(Node head){
+		// base case
+		if (head==null ||head.next==null)
+		{
+			return head;
+		}
+		//find mid
+		Node mid=GetMid(head);
+		mid.next=null;// mid ke backside ka node break kiya 
+        Node   righthead=mid.next;
+           //lefthalf calling Mergerdsort       		
+                    Node newleft=mergedsort(head);
+                 //rigthhalf to calling Mergerdsort
+                      Node newright=mergedsort(righthead);
+    return merge(newleft,newright);
+	}
+	public static   Node printnode(Node head){
+		Node temp=head;
+		while (temp != null)
+		{
+			System.out.print(temp.data+"==>");
+			temp=temp.next;
+		}
+	}
+
+	public static void main(String[] args) 
+	{
+		LinkedList<Integer> ll=new LinkedList<>();
+		ll.addFirst(1);
+		ll.addFirst(2);
+		ll.addFirst(3);
+		ll.addFirst(4);
+		ll.addFirst(5);
+		ll.printnode();
+		ll.head=mergedsort(ll.head);
+		ll.printnode();
+		System.out.println("Hello World!");
+	}
+}

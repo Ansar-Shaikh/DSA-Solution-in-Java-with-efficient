@@ -1,0 +1,69 @@
+.container{
+    width: 80%;
+    height: 600px;
+    border: 5px solid purple;
+    display: inline-flex;
+    justify-content: center;
+    display: flex;
+    font-size: 15px;
+    line-height: 1.5px;
+    background-image: url("pratu.jpeg");
+    background-position: center;
+    animation-name: image;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+
+}
+.items{
+    width: 200px;
+    height: 200px;
+    background-color: chartreuse;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left:-50px;
+    margin-top: 300px;
+    animation-name: item;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    flex-wrap: wrap;
+
+}
+.color{
+    width: 200px;
+    height: 200px;
+    background-color:crimson;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 50px;
+    margin-top: 300px;
+    animation: color 2s ease-in 0 infinite alternate;
+    animation-name: color1;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+/* template of animation */
+@keyframes item{
+    from{font-size: 25px;}
+    to{font-size: 35px;}
+}
+@keyframes color1{
+    from{background-color: cyan;}
+    to{background-color: darkorange;}
+}
+@keyframes image{
+    from{margin-left: 60px;}
+    to{margin-right: 60px;}
+}

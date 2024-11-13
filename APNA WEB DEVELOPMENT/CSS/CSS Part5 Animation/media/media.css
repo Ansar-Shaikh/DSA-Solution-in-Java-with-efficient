@@ -1,0 +1,14 @@
+@media(min-width:200px){
+    h3{
+        font-size: 100px;
+        background-color: rgb(39, 26, 9);
+        color: aliceblue;
+    }
+}
+@media(max-width:600px){
+    h3{
+        font-size: 100px;
+        background-color: rgb(211, 37, 170);
+        color: rgb(2, 4, 6);
+    }
+}

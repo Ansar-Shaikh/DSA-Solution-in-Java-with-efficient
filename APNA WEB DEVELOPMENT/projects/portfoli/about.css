@@ -1,0 +1,129 @@
+#about {
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 80px;
+    background-color: #189ab4;
+    padding-top: 40px;
+    font-size: 50px;
+
+}
+.image{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    left: 300px;
+    justify-content: center;
+    margin-left: 400px;
+    /* border: 5px solid #41729f; */
+    margin-top: 100px;
+}
+.aboutmi{
+    width: 600px;
+    height: 600px;
+    /* display: flex; */
+    /* left: 300px; */
+    /* justify-content: center; */
+    margin-left: 400px;
+    border: 5px solid #41729f;
+}
+.aboutmi h2{
+    text-align: center;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+
+    font-size: 2em;
+    animation: font 2s ease-in  0s infinite alternate ;
+}
+@keyframes font{
+    0%{
+      font-size:30px ;
+      color:orange;
+      padding-right: 20px;
+    }
+    50%{
+        font-size: 40px;
+        color: white;
+
+    }
+    100%{
+    
+            font-size:50px ;
+            color:green;
+            padding-left: 20px;
+          
+    }
+}
+.aboutmi h3{
+    padding-top: 15px;
+    /* display: flex; */
+    /* justify-content: baseline; */
+}
+.aboutmi #para{
+    font-size: 20px;
+    font-weight: 10px;
+    color: darkblue;
+    padding-left: 20px;
+    
+}
+.image img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-size: contain;
+    background-position: center;
+    padding-top: 50px;
+    /* margin-left: 400x; */
+    animation: image 2s ease-in 0s infinite alternate;
+
+}
+
+@keyframes image {
+    0% {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background-size: contain;
+        /* box-shadow: 5px 5px 5px yellow; */
+    }
+    100%{
+        width: 500px;
+        height: 500px;
+         border-radius: 50%;
+         background-size: contain;
+        /* box-shadow: 5px 5px 5px #05445e ; */
+        transform:rotate(180);
+    }
+}
+.skill{
+    width: 80%;
+    height: 690px;
+    margin-left: 120px;
+    border: 2px solid purple;
+    /* display: flex;
+    justify-content: center; */
+    background-color: #41729f;
+}
+#Web{
+    width: 400px;
+    height: 600px;
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 20px;
+    color: white;
+    border: 5px solid purple;
+    padding-top: 20px;
+    margin-left: 50px;
+    box-shadow: -5px -5px 5px yellow;
+}
+#data{
+    width: 400px;
+    height: 600px;
+    display: inline-block;
+    margin-left: 200px;
+    padding-top: 20px;
+    font-size: 20px;
+    color:white;
+    border: 5px solid purple;
+    box-shadow: 5px 5px 5px yellow;
+}

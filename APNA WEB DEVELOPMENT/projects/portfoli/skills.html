@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansar Shaikh - Skills</title>
+    <link rel="stylesheet" href="skill.css">
+</head>
+<body>
+
+    <header>
+        <h1>Ansar Shaikh - My Skills</h1>
+        <p>Click on a skill to learn more!</p>
+    </header>
+
+    <section id="skills-container">
+        <div class="skill" onclick="showDetails('dsa')">
+            <h3>Data Structures & Algorithms (DSA)</h3>
+        </div>
+        <div class="skill" onclick="showDetails('mern')">
+            <h3>MERN Stack</h3>
+        </div>
+        <div class="skill" onclick="showDetails('leetcode')">
+            <h3>LeetCode Problem Solving</h3>
+        </div>
+        <div class="skill" onclick="showDetails('sql')">
+            <h3>SQL</h3>
+        </div>
+    </section>
+
+    <section id="details">
+        <p id="skill-details">Click on a skill to see the details here.</p>
+    </section>
+
+    <script src="skill.js"></script>
+</body>
+</html>

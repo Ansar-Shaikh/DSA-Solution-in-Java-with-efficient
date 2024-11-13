@@ -1,0 +1,40 @@
+
+class Balancedtree {
+	static class Node
+	{ int data;
+	Node left;
+	Node right;
+	Node (int data){
+		this.data=data;
+		this.left=left;
+		this.right=right;
+	}
+	}
+
+  boolean istreebalanced = true;
+    
+    public  static boolean isBalanced(Node root) {
+        dfs(root);
+        return istreebalanced;
+    }
+    
+   public  static  int dfs(Node root) {
+        if (root == null) return 0;
+        int lh = dfs(root.left);
+        int rh = dfs(root.right);
+        if (Math.abs(lh - rh) > 1) {
+            istreebalanced = false;
+        }
+        return Math.max(lh, rh) + 1;
+    }
+	public static void main(String[] args) 
+	{
+		Node root=new Node(1);
+	    root.left=new Node(2);
+		root.right=new Node(3);
+		root.left.left=new Node(4);
+		root.left.right=new Node(5);
+		root.right.right=new Node(7);
+		System.out.print(isBalanced(root));
+	}
+}

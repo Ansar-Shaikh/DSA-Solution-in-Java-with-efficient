@@ -1,0 +1,42 @@
+import java.util.*;
+class MinJumpsInArray
+{
+	public  static void print(int dp[]){
+		for (int i=0;i<dp.length ;i++ )
+		{
+			System.out.print(dp[i]+ " " );
+		}
+	}
+	public static int minJumps(int arr[]){
+		int n=arr.length;
+
+		int dp[]=new int[n];
+		dp[n-1]=0;
+		Arrays.fill(dp,Integer.MAX_VALUE);
+		for (int i=n-2;i>=0;i-- )
+		{
+			int step=arr[i];
+			int ans=Integer.MAX_VALUE;
+			for (int j=i+1;j<=step+i && j<n ;j++ )
+			{
+               if (dp[j] != -1)
+               {
+				   ans=Math.min(ans,dp[j]+1);
+               }
+			}
+			if (ans != Integer.MAX_VALUE)
+			{
+				dp[i]=ans;
+			}
+		}
+		print(dp);
+		System.out.println();
+		return dp[0]=Integer.MAX_VALUE? 0:dp[0];
+	}
+	public static void main(String[] args) 
+	{
+		int arr[]={2,3,1,1,4};
+
+		System.out.println("min Jumps!"+minJumps(arr));
+	}
+}

@@ -1,0 +1,40 @@
+import java.util.*;
+class LonelyNumberInArrayList 
+{
+	public static ArrayList<Integer> LonelyNumber(ArrayList<Integer>num){
+		ArrayList<Integer> result=new ArrayList<>();
+		Collections.sort(num);
+		int n=num.size();
+		for (int i=0; i<n;i++)
+		{
+			// staring previous element
+			if ( i !=0 && (num.get(i)==num.get(i+1)  || num.get(i)+1 == num.get(i-1)))
+			{
+				continue;
+			}
+			if ( i !=n-1 && (num.get(i)==num.get(i-1)  || num.get(i)-1 == num.get(i-1)))
+			{
+				continue;
+			}
+			result.add(num.get(i));
+		}
+		return result;
+	}
+	public static void main(String[] args) 
+	{
+		ArrayList<Integer>list=new ArrayList<>();
+		list.add(2);
+				list.add(5);
+						list.add(8);
+								list.add(3);
+										list.add(5);
+												list.add(9);
+														list.add(11);
+																list.add(15);
+															 res= LonelyNumber(list);
+															for (int i=0;i<res.length ;i++ )
+															{
+																	System.out.println(res[i]+" ");
+															}
+	}
+}

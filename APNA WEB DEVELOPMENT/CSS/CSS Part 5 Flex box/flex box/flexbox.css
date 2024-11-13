@@ -1,0 +1,14 @@
+.container{
+    height: 400px;
+    width: 80%;
+    margin: 10px auto;
+    border: 3px solid purple;
+    display: flex;
+    background-color: rgb(136, 145, 161);
+    flex-direction: column;
+}
+.container div{
+    height: 100px;
+    width: 100px;
+
+}

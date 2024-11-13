@@ -1,0 +1,11 @@
+.outer{
+    display: flex;
+    justify-content: space-evenly;
+}
+h1,p{
+ text-align: center;
+}
+h4{
+  height: 50px;
+ background-color: rgb(192, 213, 213 ,0.1) ;
+}
